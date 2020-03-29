@@ -53,10 +53,10 @@ public class SDCardDemoActivity extends AppCompatActivity implements View.OnClic
                 }
                 break;
             case R.id.sd_card_check_btn:
-                String state = Environment.getExternalStorageState();
-                if (state.equals(Environment.MEDIA_MOUNTED)) {
+                String state = Environment.getExternalStorageState();//这里是得到sd卡的状态
+                if (state.equals(Environment.MEDIA_MOUNTED)) {//这个是判断是否为sd安装状态
                     Log.d(TAG, "内存卡已经安装，媒介安装了");
-                } else if (state.equals(Environment.MEDIA_UNMOUNTED)) {
+                } else if (state.equals(Environment.MEDIA_UNMOUNTED)) {//这个是判断是否为sd卸载状态
                     Log.d(TAG, "没有安装内存卡,已经移除了");
                 } else {
                     Log.d(TAG, "都没有执行");
